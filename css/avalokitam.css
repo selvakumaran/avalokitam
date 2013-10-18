@@ -1,0 +1,221 @@
+/*
+ * Avalokitam CSS
+
+
+Copyright (C) 2013 Vinodh Rajan vinodh@virtualvinodh.com
+
+This file is a part of Avalokitam.
+
+Avalokitam is free software: you  can redistribute it and/or modify it
+under the  terms of the GNU  General Public License as  published by the
+Free Software Foundation,  either version 3 of the License,  or (at your
+option) any later version.
+
+This  program  is distributed  in  the  hope  that  it will  be  useful,
+but  WITHOUT  ANY  WARRANTY;  without   even  the  implied  warranty  of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.
+
+You should have received a copy  of the GNU General Public License along
+with this program. If not, see <http://www.gnu.org/licenses/>. 
+ 
+ */
+
+body {
+	font: 85% "Tahoma", sans-serif;
+	margin: 0px;
+}
+
+p,ul {
+
+line-height:22.5px;
+
+}
+
+
+
+h1 {
+
+color:#8E2323;
+
+}
+
+h2 {
+
+color:CD5555;
+
+}
+
+h2.sample, h3.sample {
+
+display:run-in;
+margin-right:20px;
+
+}
+
+h3 {
+
+color:C67171;
+
+}
+
+.Header {
+	text-align: center;
+	color: #B22222
+}
+
+.subHeader {
+	text-align: center;
+	color: #FFA07A
+}
+
+.subtitle {
+	text-align: center;
+	color: grey;
+}
+ .spadiv
+        {
+            display: inline-block; 
+			width: 5em;
+        }
+		
+.nE_rasai {
+
+	color: #FF4500;
+
+}
+
+.nirYasai {
+	color: #4169E1;
+}
+
+.nE_rpuasai {
+
+	color: #FF4500;
+
+}
+
+.nirYpuasai {
+	color: #4169E1;
+}
+
+.nE_rasai2 {
+	color: grey;
+}
+
+.nirYasai2 {
+	color: #2F4F4F;
+}
+
+.nE_rpuasai2 {
+	color: grey;
+}
+
+.nirYpuasai2 {
+	color: #2F4F4F;
+}
+
+.ati {
+	color: Green
+}
+
+.tal-seer {
+	color: #B22222
+}
+
+.tal-asai {
+	color: #191970
+}
+
+.vetalai {
+	color: #808000
+}
+
+.vatalai {
+	color: #2E8B57
+}
+
+.aatalai {
+	color: #2F4F4F
+}
+
+.katalai {
+	color: #006400
+}
+
+.todailine {
+	color: #C0C0C0
+}
+
+.todaiword {
+	color: #FF4500	
+}
+
+.todaiindex {
+	color: #4169E1
+}
+
+.todaipattern {
+	color: #4682B4
+}
+
+.img {
+  margin: 0 auto;
+  display: block;
+}
+
+.sidemenu-right {
+
+float:right;
+position:relative;
+width:150px;
+
+
+}
+
+.sidemenu-left {
+
+float:left;
+position:relative;
+width:150px;
+
+
+}
+
+.wrong {
+
+color:red;
+
+}
+
+.right {
+
+color:green;
+
+}
+
+.fb-like, .tweet, .languages, .g-plusone {
+
+margin-left:10px;
+
+}
+
+.quote {
+
+text-align:left;
+margin-left:12.5px;
+color:grey;
+}
+
+.container {
+margin-left: 160px;
+margin-right: 160px;	
+}
+
+.container-cont {
+margin-left: 160px;
+margin-right: 160px;	
+border: 1px solid #a1a1a1;
+border-radius:25px;
+padding-left:25px;
+}
