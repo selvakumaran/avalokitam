@@ -263,14 +263,14 @@ require_once "menu.php";
 
 		<image src="css/images/options.png" />
 		<image src="css/images/sample-analysis-ta.png" />
-
+		<br/>
 		பொதுவாக டெர்மினலில்
 		யூனிகோட் தமிழ் முறையாக
 		இருக்காது. எனவே,
 		வெளியீட்டை கோப்பில்
 		சேமிக்காத பட்சத்தில்
 		ஆங்கில வெளியீட்டை
-		பயன்படுத்தலாம்.
+		பயன்படுத்தலாம். <br/>
 
 	</div>
 

@@ -106,7 +106,7 @@ require_once "menu.php";
 
 		<p>
 			The Tool runs on PHP in Google App Engine. It has a <a
-				href="help-en#API">REST API</a> and it can also be run from the <a
+				href="help-en#API">REST API</a> and can also be run from the <a
 				href="help-en#terminal">terminal</a>.
 		</p>
 

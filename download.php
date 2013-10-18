@@ -67,6 +67,9 @@ require_once "menu.php";
 			இல்லாமல் இருக்கலாம்
 			எனப்தை கவனத்தில்
 			கொள்ளவும்.</p>
+			
+		<p><em>கீழே உள்ள இணைப்பை பழைய பதிப்பைக் கொண்டுள்ளது. கூடிய விரைவில் 
+		புதிய பதிப்புக்கான இணைப்பு தரப்படும்.</em></p>
 
 
 		<h1>Download</h1>
@@ -88,8 +91,13 @@ require_once "menu.php";
 		</p>
 		<p>A prepackaged and self-contained version for Windows can be
 			downloaded from the below link. Note that, this may not contain the
-			latest updates made to the live server.</p>
-		<br />
+			latest updates made to the live server.
+			
+			<p><em>The link below points to an older version. The package will be updated 
+			soon with the new code and the link will be provided. </em></p>
+			
+			</p>
+			<br/>
 		<ul>
 			<li><a
 				href="http://www.virtualvinodh.com/download/Avalokitam%20Setup.exe">http://www.virtualvinodh.com/download/Avalokitam
