@@ -216,16 +216,17 @@ require_once "menu.php";
 					around 3 - 6 feet per line.</p>
 
 				<h2>Ornamentation</h2>
-
+				<p> In Tamil, <em>Toṭai</em> refers to a collection of several forms of poetic devices - both phonetic ( e.g. <em>etuaki,muraṇ</em>) and lexical ( e.g. <em>muran</em> - Usage of lexically
+				opposite pairs such as light & dark). </p>
 				<p>Ornamentation in Tamil Prosody mainly occurs as :</p>
 
 				<ol>
-					<li><em>monai</em> - Alliteration of the first Letter
+					<li><em>mōṉai</em> - Alliteration of the first Letter
 					
 					<li><em>etukai</em> - Rhyme on the second Letter
 				
 				</ol>
-
+				
 				<p>These can occur between the feet in the same line and also
 					between first foot of the lines in a verse.</p>
 
@@ -349,7 +350,7 @@ require_once "menu.php";
 						mutaṟ/ṟē ula/ku
 					</p>
 
-					<h3>Phones</h3>
+					<h3>Letters</h3>
 
 					<p>
 						<sup>i</sup>V<u>CV</u>/<u>CV</u> <u>CV</u><u>CV</u>/<u>CV</u> <sup>i</sup>V<u>CV</u>C/<u>CV</u>C/<u>CV</u>C

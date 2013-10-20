@@ -34,7 +34,12 @@ $formsubmit = ! empty ( $_POST ['ttxt'] );
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Tamil Prosody Analyzer</title>
+<meta property="og:image" content="http://www.avalokitam.com/css/images/Avalokitesvara.gif"/>
+<meta property="og:title" content="Avalokitam - Tamil Prosody Analyzer"/>
+<meta property="og:url" content="http://www.avalokitam.com"/>
+<meta property="og:site_name" content="Avalokitam"/>
+
+<title>Avalokitam - Tamil Prosody Analyzer</title>
 
 <?PHP echo $jscss?>
 
