@@ -216,8 +216,9 @@ require_once "menu.php";
 					around 3 - 6 feet per line.</p>
 
 				<h2>Ornamentation</h2>
-				<p> In Tamil, <em>Toṭai</em> refers to a collection of several forms of poetic devices - both phonetic ( e.g. <em>etuaki,muraṇ</em>) and lexical ( e.g. <em>muran</em> - Usage of lexically
-				opposite pairs such as light & dark). </p>
+				<p> In Tamil, <em>Toṭai</em> refers to a collection of several forms of poetic devices - both phonetic ( e.g. <em>etuaki,mōṉai</em>) and lexical ( e.g. <em>muraṇ</em> - Usage of lexically
+				opposite pairs such as light & dark). Etymologically, it is derived from <em>toṭu</em>, meaning 'making a flower garland'. Similar to that of linking
+				different flowers (and forming patterns), patterns can be formed in a verse composition, by means of the words and syllables. </p>
 				<p>Ornamentation in Tamil Prosody mainly occurs as :</p>
 
 				<ol>
