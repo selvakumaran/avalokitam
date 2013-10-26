@@ -171,18 +171,18 @@ require_once "menu.php";
 				<table cellspacing="5"">
 					<tr>
 						<td>- - =</td>
-						<td>tēmāṅkāṉi</td>
+						<td>tēmāṅkaṉi</td>
 					</tr>
 					<tr>
 						<td>= - =</td>
-						<td>puḷimāṅkāṉi</td>
+						<td>puḷimāṅkaṉi</td>
 					</tr>
 					<td>- = =</td>
-					<td>kūviḷaṅkāṉi</td>
+					<td>kūviḷaṅkaṉi</td>
 					</tr>
 					<tr>
 						<td>= = =</td>
-						<td>karuviḷaṅkāṉi</td>
+						<td>karuviḷaṅkaṉi</td>
 					</tr>
 				</table>
 				<p>Note that the names of the classes themselves parse into the feet
