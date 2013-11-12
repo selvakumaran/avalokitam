@@ -21,7 +21,7 @@ require_once 'google/appengine/api/mail/Message.php';
 use google\appengine\api\mail\Message;
 
 $publickey = "Enter_your_RECAPTCHA_public_key";
-$publickey = "Enter_your_RECAPTCHA_private_key";
+$privatekey = "Enter_your_RECAPTCHA_private_key";
 
 include_once "recaptchakeys.php";
 
