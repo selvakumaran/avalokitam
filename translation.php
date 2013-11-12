@@ -64,7 +64,9 @@ function lanconTrn($text, $lang) {
 			"அவலோகிதம் குறித்து கருத்துக்கள், ஆலோசனைகள் ஏதேனும் இருப்பின் தெரியப்படுத்துக:" => "Please provide your feedback and suggestions about Avalokitam here:",
 			"பெயர்:" => "Name:",
 			"மின்னஞ்சல்:" => "E-mail:",
-			"அனுப்புக" => "Send" 
+			"அனுப்புக" => "Send", 
+			"கூகிள் கணக்குடன் உள்நுழைக" => "Sign in with Google account",
+			"வெளியேறுக" => "sign out",
 	)
 	;
 	

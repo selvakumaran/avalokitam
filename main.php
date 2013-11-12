@@ -58,6 +58,25 @@ $formsubmit = ! empty ( $_POST ['ttxt'] );
 
 <?PHP echo $head?>
 
+<? require_once 'google/appengine/api/users/User.php';
+require_once 'google/appengine/api/users/UserService.php';
+
+use google\appengine\api\users\User;
+use google\appengine\api\users\UserService;
+
+// $user = UserService::getCurrentUser();
+// 
+// if (isset($user)) {
+//   echo sprintf('<div class="login">வருக, %s! (<a href="">உங்கள் பாக்கள்</a>) (<a href="%s">வெளியேறுக</a>)</div>',
+//                $user->getNickname(),
+//                UserService::createLogoutUrl('/'));
+// } else {
+//   echo sprintf('<div class="login"><a href="%s">கூகிள் கணக்குடன் உள்நுழைக</a></div>',
+//                UserService::createLoginUrl('/'));
+// }
+
+?>
+
 <?PHP echo $menu?>
 
 <div class="container">
@@ -183,6 +202,9 @@ if ($formsubmit) {
 		                                                                                                      // this
 	
 	?>
+
+	<!-- <span style="float: left; padding-right:1em"><a href="/save" target="_blank"><span
+										class="uiTran"><?PHP echo lanconTrnL("சேமி",$_SESSION['lang']); ?></span></a></span> -->
 	
 	<span style="float: right;"><a href="/xml" target="_blank"><span
 										class="uiTran"><?PHP echo lanconTrnL("XML வடிவில் காண",$_SESSION['lang']); ?></span></a></span>

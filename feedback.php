@@ -20,8 +20,10 @@ require_once 'google/appengine/api/mail/Message.php';
 
 use google\appengine\api\mail\Message;
 
-$publickey = "6LcvHOgSAAAAANFGki5OXL5NqDIQDa0H7lvDfvkI";
-$privatekey = "6LcvHOgSAAAAAMbREQWCrbnvUOO92FiVrvqnd1N8";
+$publickey = "Enter_your_RECAPTCHA_public_key";
+$publickey = "Enter_your_RECAPTCHA_private_key"
+
+include_once "recaptchakeys.php";
 
 $error = null;
 

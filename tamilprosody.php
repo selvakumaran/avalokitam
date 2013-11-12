@@ -161,8 +161,8 @@ require_once "menu.php";
 					<td>= - -</td>
 					<td>puḷimāṅkāy</td>
 				</tr>
-				<td>- = -</td>
-				<td>kūviḷaṅkāy</td>
+					<td>- = -</td>
+					<td>kūviḷaṅkāy</td>
 				</tr>
 				<tr>
 					<td>= = -</td>
@@ -177,8 +177,8 @@ require_once "menu.php";
 						<td>= - =</td>
 						<td>puḷimāṅkaṉi</td>
 					</tr>
-					<td>- = =</td>
-					<td>kūviḷaṅkaṉi</td>
+						<td>- = =</td>
+						<td>kūviḷaṅkaṉi</td>
 					</tr>
 					<tr>
 						<td>= = =</td>
