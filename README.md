@@ -1,5 +1,4 @@
 Avalokitam - Tamil Prosody Analyzer
-
 ==========
 
 Avalokitam is a Prosody Analyzer for the Tamil Language. It constructs a parse tree of the input text based on the prosodic syllable patterns. Based on this parse tree, the input verses are analyzed for all the six basic elements of Tamil prosody: eḻuttu (Phone), acai (Metreme), cīr (Metrical Foot), taḷai (Linkage), aṭi (Metrical Line), toṭai (Ornamenation). The meter of the verse is then recognized by matching the elements with the elaborate and complex rules of Tamil prosody.
