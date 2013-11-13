@@ -24,8 +24,6 @@ require_once "menu.php";
 
 <?PHP echo $jscss; ?>
 
-<script type="text/javascript" src="js/sample.js"></script>
-
 </head>
 <body>
 
