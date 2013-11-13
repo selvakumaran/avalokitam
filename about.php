@@ -126,7 +126,7 @@ require_once "menu.php";
 
 		<p>
 			You can read more about me on my <a
-				href="http:/www.virtualvinodh.com/about">personal website</a> and
+				href="http://www.virtualvinodh.com/about">personal website</a> and
 			about my research on my <a
 				href="http://sachi.cs.st-andrews.ac.uk/people/phd-students/vinodh-rajan/">university
 				webpage</a>.
