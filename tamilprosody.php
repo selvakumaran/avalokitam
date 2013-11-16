@@ -58,7 +58,7 @@ require_once "menu.php";
 		<h2>Letter</h2>
 		<p>
 			Tamil Script is an alpha-syllabary. A <em>letter</em> in Tamil
-			Prosody corresponds to the <em>orthographic grapheme</em>.
+			Prosody corresponds to an <em>orthographic grapheme</em>.
 		</p>
 		<p>Tamil differentiates three types of Letters (due to its
 			orthography)</p>
@@ -211,14 +211,14 @@ require_once "menu.php";
 				<h2>Metrical Line</h2>
 
 				<p>A Metrical line can be composed of several metrical feet. There
-					are no specific upper limit for the number of feet that may appear
+					are no specific upper limit for number of feet that may appear
 					in a line, though it rarely exceeds beyond 8. In most cases it is
 					around 3 - 6 feet per line.</p>
 
 				<h2>Ornamentation</h2>
 				<p> In Tamil, <em>Toṭai</em> refers to a collection of several forms of poetic devices - both phonetic ( e.g. <em>etuaki,mōṉai</em>) and lexical ( e.g. <em>muraṇ</em> - Usage of lexically
 				opposite pairs such as light & dark). Etymologically, it is derived from <em>toṭu</em>, meaning 'making a flower garland'. Similar to that of linking
-				different flowers (and forming patterns), patterns can be formed in a verse composition, by means of the words and syllables. </p>
+				different flowers (and forming patterns), patterns can be formed in a verse composition, by means of words and syllables. </p>
 				<p>Ornamentation in Tamil Prosody mainly occurs as :</p>
 
 				<ol>
@@ -228,7 +228,7 @@ require_once "menu.php";
 				
 				</ol>
 				
-				<p>These can occur between the feet in the same line and also
+				<p>These can occur between feet in the same line and also
 					between first foot of the lines in a verse.</p>
 
 				<h3>Alliteration</h3>
@@ -236,10 +236,10 @@ require_once "menu.php";
 				homophones, few other pairs of phones such as
 				<em>m-v</em>,
 				<em>ñ-n</em>,
-				<em>u-o</em> etc. are considered equivalent for the purpose of
+				<em>u-o</em> etc. are considered equivalent for purposes of
 				alliteration.
 				<h3>Rhyme</h3>
-				<p>Rhyme on the second Letter is the another type of Ornamentation
+				<p>Rhyme on second Letter is the another type of Ornamentation
 					found in Tamil Prosody. For a feet to be considered as rhyming with
 					another feet, the second Letter must belong to the same consonant
 					class while the first Letter must agree in vowel length.</p>
@@ -262,8 +262,8 @@ require_once "menu.php";
 					<li>vañcippā
 				
 				</ol>
-				<p>The rules governing these metres are mostly concerned with the
-					classes of metrical feet allowed, number of feet per line and the
+				<p>The rules governing these metres are mostly concerned with
+					classes of metrical feet allowed, number of feet per line and
 					type of linkage occurring.</p>
 				<p>Apart from these main metres, there are four more "minor" metres
 					which are considered belonging to the family (iṉam) of the above
@@ -284,12 +284,12 @@ require_once "menu.php";
 				
 				</ol>
 				<p>
-					These don't have very strict rules as compared to the major metres.
+					These don't have very strict rules as compared to major metres.
 					They may superficially resemble the major metres, for instance by
 					the number of the feet per line. In fact in most cases, the only
 					rules governing these "family" metres are number of metrical feet
 					in each line of the verse. Though some metres like <em>Kalitturai</em>
-					also impose additional rules, like the necessity of all the lines
+					also impose additional rules, like the necessity of all lines
 					rhyming in the second letter.
 				</p>
 
@@ -304,7 +304,7 @@ require_once "menu.php";
 				<h1>
 					Sample Analysis
 					</h2>
-					For illustration purposes, let's consider a verse composed in the <em>Veṇpā</em>
+					For illustration purposes, let's consider a verse composed in <em>Veṇpā</em>
 					metre:
 
 					<p>
@@ -399,7 +399,7 @@ require_once "menu.php";
 					</p>
 
 					<p>
-						This verse satisfies all the rules of the <em>Veṇpā</em> metre.
+						This verse satisfies all rules of the <em>Veṇpā</em> metre.
 						Being of two Metrical Lines, it falls under the sub-type of <em>Kuṟaḷ
 							Veṇpā</em>.
 					</p>
