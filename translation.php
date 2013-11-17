@@ -16,6 +16,7 @@
 if (isset ( $_REQUEST ['txt'] )) {
 	echo lanconTrn ( trim ( $_REQUEST ['txt'] ), $_REQUEST ['lang'] );
 }
+
 function lanconTrnL($text, $lang) 
 
 {
@@ -24,6 +25,7 @@ function lanconTrnL($text, $lang)
 	else
 		return $text;
 }
+
 function lanconTrn($text, $lang) {
 	$transString = array (
 			"முகப்பு" => "Home",
@@ -67,8 +69,7 @@ function lanconTrn($text, $lang) {
 			"அனுப்புக" => "Send", 
 			"கூகிள் கணக்குடன் உள்நுழைக" => "Sign in with Google account",
 			"வெளியேறுக" => "sign out",
-	)
-	;
+	);
 	
 	if ($lang == "en") {
 		return $transString [$text];
