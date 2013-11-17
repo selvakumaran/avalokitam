@@ -31,7 +31,10 @@ if ($_POST ["recaptcha_response_field"]) {
 	$resp = recaptcha_check_answer ( $privatekey, $_SERVER ["REMOTE_ADDR"], $_POST ["recaptcha_challenge_field"], $_POST ["recaptcha_response_field"] );
 	
 	if ($resp->is_valid) {
-		$msgSent = "தங்களது கருத்து பெறப்பட்டது. நன்றி";
+		if($_SESSION['lang']=='en')
+			$msgSent = "Your feedback has been received. Thanks";
+		else
+			$msgSent = "தங்களது கருத்து பெறப்பட்டது. நன்றி";
 		
 		$message_body = "From:" . $_POST ["nm"] . "\n\n" . "Email:" . $_POST ["em"] . "\n\n" . $_POST ["ftxt"];
                 
@@ -47,7 +50,10 @@ $mail_options = [
 		$message->send ();
 	} else {
 		$error = $resp->error;
-		$msgError = "ரீ-கேப்ட்சா பிழை. மீண்டும் ரீ-கேப்ட்சா உரையினை சரியான முறையில் உள்ளீடு செய்க";
+		if($_SESSION['lang']=='en')
+			$msgError = "Incorrect ReCaptcha text. Please try entering the correct text";
+		else		
+			$msgError = "ரீ-கேப்ட்சா பிழை. மீண்டும் ரீ-கேப்ட்சா உரையினை சரியான முறையில் உள்ளீடு செய்க";
 	}
 }
 
