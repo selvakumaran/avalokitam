@@ -116,7 +116,7 @@ $foot = '<br/><table align="center">
 <br/>
 </div>
 <div class="footnote" style="text-align:center;color:grey">
-Copyright © 2013 <a href="http://www.virtualvinodh.com/about">Vinodh Rajan</a>. This software is released under GNU GPL v3 license. You may read the license <a href="http://www.gnu.org/licenses/gpl.html">here</a></div>
+Copyright © 2013 <a href="http://www.virtualvinodh.com/about">Vinodh Rajan</a>. This software is released under GNU AGPL v3 license. You may read the license <a href="http://www.gnu.org/licenses/gpl.html">here</a></div>
 <br/>';
 
 ?>
