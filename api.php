@@ -32,9 +32,9 @@ if (isset ( $_REQUEST ['verse'] )) {
 	else
 		$lang = 'ta';
 	
-	if ($_REQUEST ['lang'] == 1)
+	if ($_REQUEST ['kurilu'] == 1)
 		$kurilu = True;
-	if ($_REQUEST ['lang'] == 0)
+	else
 		$kurilu = False;
 	
 	$ptree = new ProsodyParseTree ( $_REQUEST ['verse'], $lang, $kurilu );
