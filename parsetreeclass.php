@@ -344,7 +344,7 @@ class ProsodyParseTree
 	/**
 	 * Displays the analysis as XML
 	 */
-	public function DisplayXML() {
+	public function DisplayXML($venCheck=False) {
 		$verseXML = new SimpleXMLElement ( "<?xml version=\"1.0\" encoding=\"utf-8\" ?><verse></verse>" );
 		$verseXML->addAttribute ( 'metre', lancon ( lat2tam ( $this->MetreType ), $this->Lang ) );
 		
@@ -385,7 +385,7 @@ class ProsodyParseTree
 					if (isset ( $value ['nE_r'] )) {
 						$metreme = $feet->addChild ( "Metreme", lancon ( lat2tam ( $value ['nE_r'] ), $this->Lang ) );
 						
-						if ($VenpaaIndicator && $lineCount == $this->TotalLines - 1 && $lineFeetCount == 3 && $metremeCount == 2)
+						if (($lineCount == $this->TotalLines - 1 && $lineFeetCount == 3 && $metremeCount == 2 && !isset($this->VenpaError ['final'] [1])) && ($VenpaaIndicator || $venCheck))
 							$metreme->addAttribute ( 'type', lancon ( lat2tam ( 'pu' ), $this->Lang ) );
 						else
 							$metreme->addAttribute ( 'type', lancon ( lat2tam ( 'nE_r' ), $this->Lang ) );
@@ -398,7 +398,7 @@ class ProsodyParseTree
 				}
 				
 				if ($key == "meta") {
-					if ($VenpaaIndicator && $lineCount == $this->TotalLines - 1 && $lineFeetCount == 3)
+					if (($lineCount == $this->TotalLines - 1 && $lineFeetCount == 3 && !isset($this->VenpaError ['final'] [1]) ) && ( $VenpaaIndicator || $venCheck))
 						$feet->addAttribute ( 'class', lancon ( lat2tam ( $this->VenpaaWordClass [$this->VenLastSyllable] ), $this->Lang ) );
 					else
 						$feet->addAttribute ( 'class', lancon ( lat2tam ( $value ), $this->Lang ) );
@@ -899,6 +899,10 @@ CWS;
 				}
 			}
 			
+			# Check number of lines
+			if($this->TotalLines < 2)
+				$LineClassCheck = False;
+			
 			if ($rit->getDepth () == 2) {
 				
 				/* Check for Allowed Line Classes */
@@ -935,11 +939,12 @@ CWS;
 		
 		$FinalSyllableClassCheck = FALSE;
 		
+		
 		if (empty ( $LastSyllable [2] )) {
 			
 			$FinalSyllableClassCheck = TRUE;
 		} 
-
+		
 		else if (strlen ( $LastSyllable [1] ) == 2 && substr ( $LastSyllable [1], 1 ) == 'u') 
 
 		{

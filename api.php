@@ -36,10 +36,16 @@ if (isset ( $_REQUEST ['verse'] )) {
 		$kurilu = True;
 	else
 		$kurilu = False;
+		
+	if ($_REQUEST ['vencheck'] == 1)
+		$vencheck = True;
+	else
+		$vencheck = False;
+		
 	
 	$ptree = new ProsodyParseTree ( $_REQUEST ['verse'], $lang, $kurilu );
 	
-	echo $ptree->DisplayXML ();
+	echo $ptree->DisplayXML ($venCheck=$vencheck);
 }
 
 ?>

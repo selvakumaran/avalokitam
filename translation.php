@@ -71,6 +71,7 @@ function lanconTrn($text, $lang) {
 			"அனுப்புக" => "Send", 
 			"கூகிள் கணக்குடன் உள்நுழைக" => "Sign in with Google account",
 			"வெளியேறுக" => "sign out",
+			"பா இயற்றி" => "Verse creator",
 	);
 	
 	if ($lang == "en") {

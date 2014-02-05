@@ -64,7 +64,8 @@ if (isset ( $_SESSION ['lang'] )) {
 $menu = '
 <div class="sidemenu-left">
 <ul id="menu-left">
-  <li><a href="http://www.avalokitam.com"><span class="uiTran">' . lanconTrnL ( "முகப்பு", $_SESSION ['lang'] ) . '</span></a></li>';
+  <li><a href="/"><span class="uiTran">' . lanconTrnL ( "முகப்பு", $_SESSION ['lang'] ) . '</span></a></li>
+  <li><a href="/editor"><span class="uiTran">' . lanconTrnL ( "பா இயற்றி", $_SESSION ['lang'] ) . '</span></a></li>';
 $menu .= '<li><span class=""><a href="help-ta">உதவி</a></span></li>';
 $menu .= '<li><span class=""><a href="help-en">Help</a></span></li>';
 $menu .= '
@@ -114,7 +115,6 @@ $foot = '<br/><table align="center">
 </tr>
 </table>
 <br/>
-</div>
 <div class="footnote" style="text-align:center;color:grey">
 Copyright © 2013 <a href="http://www.virtualvinodh.com/about">Vinodh Rajan</a>. This software is released under GNU AGPL v3 license. You may read the license <a href="http://www.gnu.org/licenses/agpl.html">here</a></div>
 <br/>';

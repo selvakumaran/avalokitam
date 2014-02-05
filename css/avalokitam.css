@@ -226,3 +226,45 @@ text-align:right;
 margin-right:175px;
 
 }
+
+#editor {
+float:left;
+position:relative;
+height:500px;
+width:100%;
+
+}
+
+#parseedit {
+float:right;
+position:relative;
+font-size:100%;
+height:400px;
+overflow-y: scroll;
+//border:1px solid red;
+width: 100%;
+background-color:#f2efef;
+
+}
+
+.error {
+color:red;
+}
+
+#parseedit::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+#parseedit::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+#parseedit::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+#parseedit::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
