@@ -96,7 +96,7 @@ use google\appengine\api\users\UserService;
 			<h3>
 				<a href="#"><span class="uiTran"><?PHP echo lanconTrnL("பாவினை உள்ளிடவும்",$_SESSION['lang']); ?></span></a>
 			</h3>
-			<form action="<?PHP echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<form action="/" method="post">
 				<p>
 					<textarea cols="80" rows="8" id="itext" name="ttxt">
 <?PHP if(!$formsubmit) { ?>
