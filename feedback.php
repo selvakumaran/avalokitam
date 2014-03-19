@@ -34,9 +34,9 @@ if ($_POST ["recaptcha_response_field"]) {
 	
 	if ($resp->is_valid) {
 		if($_SESSION['lang']=='en')
-			$msgSent = "Your feedback has been received. Thanks";
+			$msgSent = "<div class=\"mailmsg\">Your feedback has been received. Thanks</div>";
 		else
-			$msgSent = "தங்களது கருத்து பெறப்பட்டது. நன்றி";
+			$msgSent = "<div class=\"mailmsg\">தங்களது கருத்து பெறப்பட்டது. நன்றி</div>";
 		
 		$message_body = "From:" . $_POST ["nm"] . "\n\n" . "Email:" . $_POST ["em"] . "\n\n" . $_POST ["ftxt"];
                 
@@ -53,9 +53,9 @@ $mail_options = [
 	} else {
 		$error = $resp->error;
 		if($_SESSION['lang']=='en')
-			$msgError = "Incorrect ReCaptcha text. Please try entering the correct text";
+			$msgError = "<div class=\"mailmsg\">Incorrect ReCaptcha text. Please try entering the correct text</div>";
 		else		
-			$msgError = "ரீ-கேப்ட்சா பிழை. மீண்டும் ரீ-கேப்ட்சா உரையினை சரியான முறையில் உள்ளீடு செய்க";
+			$msgError = "<div class=\"mailmsg\">ரீ-கேப்ட்சா பிழை. மீண்டும் ரீ-கேப்ட்சா உரையினை சரியான முறையில் உள்ளீடு செய்க</div>";
 	}
 }
 
@@ -81,7 +81,7 @@ $mail_options = [
 		<br />
 
 		<form name="vinodh" method="post"
-			action="<?PHP echo $_SERVER['PHP_SELF'];?>">
+			action="feedback">
 			<div class="uiTran"><?PHP echo lanconTrnL("பெயர்:",$_SESSION['lang']); ?></div>
 			<input name="nm"
 				value="<?PHP if(isset($msgError)) echo $_POST["nm"] ?>"></input>

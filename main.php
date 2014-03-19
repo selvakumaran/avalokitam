@@ -83,15 +83,6 @@ use google\appengine\api\users\UserService;
 <?PHP echo $menu?>
 
 <div class="container">
-<?PHP if(!isset($_SESSION['notice'])) { ?>
-						<div class="ui-state-highlight ui-corner-all notice"
-							style="margin-top: 5px; padding: 0 .7em;">
-							<p>
-								<span class="ui-icon ui-icon-closethick"
-									style="float: left; margin-right: .3em;"></span>
-<i>பா இயற்றும்போதே உடனுக்குடன் பகுப்பாய்வினைப் பெற <a href="/editor">பா இயற்றியை</a> முயன்று பாருங்களேன் ! </i>
-</div>
-<?PHP } ?>
 		<div class="inp" id="accordion">
 			<h3>
 				<a href="#"><span class="uiTran"><?PHP echo lanconTrnL("பாவினை உள்ளிடவும்",$_SESSION['lang']); ?></span></a>
@@ -299,6 +290,17 @@ $ytree->DisplaySyllableWordClass();
 
 
 		</div>
+<?PHP } ?>
+
+<?PHP if(!isset($_SESSION['notice']) && !$formsubmit ) { ?>
+						<div class="ui-state-highlight ui-corner-all notice"
+							style="margin-top: 5px; padding: 0 .7em;">
+							<p>
+								<span class="ui-icon ui-icon-closethick"
+									style="float: left; margin-right: .3em;"></span>
+<i><span class="uiTran"><?PHP echo lanconTrnL("பா இயற்றும்போதே உடனுக்குடன் பகுப்பாய்வினைப் பெற முயன்று பாருங்கள்:",$_SESSION['lang']); ?></span> <a href="/editor"><span class="uiTran"><?PHP echo lanconTrnL("பா இயற்றி",$_SESSION['lang']); ?></span></a>   </i>
+</div>
+
 <?PHP } ?>
 
 <?PHP echo $foot ?>

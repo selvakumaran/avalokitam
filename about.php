@@ -96,8 +96,8 @@ require_once "menu.php";
 			constructs a parse tree of the input text based on the prosodic
 			syllable patterns. Based on this parse tree, the input verses are
 			analyzed for all the six basic elements of Tamil prosody: <em>
-				eḻuttu (Phone), acai (Metreme), cīr (Metrical Foot), taḷai
-				(Linkage), aṭi (Metrical Line), toṭai (Ornamenation)</em>. The
+				eḻuttu (Letter), acai (Metreme), cīr (Metrical Foot), taḷai
+				(Linkage), aṭi (Metrical Line) & toṭai (Ornamenation)</em>. The
 			meter of the verse is then recognized by matching the elements with
 			the elaborate and complex rules of Tamil prosody.
 		</p>

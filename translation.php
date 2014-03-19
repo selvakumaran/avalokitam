@@ -45,7 +45,7 @@ function lanconTrn($text, $lang) {
 			"ஆய்த எழுத்து:" => "Aytham:",
 			"பா உதாரணங்கள்" => "Sample Verses",
 			"யாப்பு மென்பொருள்" => "Tamil Prosody Analyzer",
-			"செய்யுள் உள்ளிடவும்" => "Input Verse",
+			"பாவினை உள்ளிடவும்" => "Input Verse",
 			"எழுத்து" => "Letter",
 			"அசை - சீர்" => "Metreme & Metrical Feet",
 			"அடி" => "Metrical Line",
@@ -72,6 +72,12 @@ function lanconTrn($text, $lang) {
 			"கூகிள் கணக்குடன் உள்நுழைக" => "Sign in with Google account",
 			"வெளியேறுக" => "sign out",
 			"பா இயற்றி" => "Verse creator",
+			"இதை விரிவாக ஆராய்க" => "Detailed Analysis",
+			"வெண்பா விதிகளை (தளை, சீர் மட்டும்) சரிபார்க்க" => "Check Venpa rules (Linkages & Metrical feet only)",
+			"பா இயற்றும்போதே உடனுக்குடன் பகுப்பாய்வினைப் பெற முயன்று பாருங்கள்:" => "For instantaneous analysis during verse creation, try using:",
+			"பா இயற்றவும்" => "Compose verse",
+			"துரித பகுப்பாய்வு" => "Instantaneous scansion",
+			"நீங்கள் பா இயற்றிக்கொண்டிருக்கும்போதே , உடனுக்குடன் தளை மற்றும் சீர் வாய்ப்பாடுகள் முதலியவை பகுப்பாய்வு செய்து கீழே வெளியிடப்படும்." => "As you are composing the verse, instantaneous scansion is perfomed - displaying linkage & metrical feet.",
 	);
 	
 	if ($lang == "en") {

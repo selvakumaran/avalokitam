@@ -34,7 +34,7 @@ require_once "menu.php";
 <div class="container">
 
 <div style="float:left;position:relative;width:35%">
-<h2>பா இயற்றவும்</h2>
+<h2><span class="uiTran"><?PHP echo lanconTrnL("பா இயற்றவும்",$_SESSION['lang']); ?></span></h2>
 				<div id="checkbox">
 					<p>
 						<input type="checkbox" id="kurilCk" name="kurilU"
@@ -59,8 +59,8 @@ require_once "menu.php";
 </div>
 
 <div style="float:left;position:relative;width:65%">
-<h2>துரித பகுப்பாய்வு</h2>
-<div style="padding-bottom:30px;"><i>நீங்கள் பா இயற்றிக்கொண்டிருக்கும்போதே , உடனுக்குடன் தளை மற்றும் சீர் வாய்ப்பாடுகள் முதலியவை பகுப்பாய்வு செய்து கீழே வெளியிடப்படும்</i>. </div>
+<h2><span class="uiTran"><?PHP echo lanconTrnL("துரித பகுப்பாய்வு",$_SESSION['lang']); ?></span></h2>
+<div style="padding-bottom:30px;"><i><span class="uiTran"><?PHP echo lanconTrnL("நீங்கள் பா இயற்றிக்கொண்டிருக்கும்போதே , உடனுக்குடன் தளை மற்றும் சீர் வாய்ப்பாடுகள் முதலியவை பகுப்பாய்வு செய்து கீழே வெளியிடப்படும்.",$_SESSION['lang']); ?></span></i> </div>
 <div id="parseedit">
 </div>
 
