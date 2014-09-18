@@ -80,8 +80,9 @@ $menu .= '
 </ul>
 <br/>
 <div class="languages" align="left"> 
-<input type="radio" id="tamil" name="lang" value="ta" ' . $checkedTamil . '>Tamil    
-<input type="radio" id = "english" name="lang" value="en" ' . $checkedEnglish . '>English</div>
+<input type="radio" id="tamil" name="lang" value="ta" ' . $checkedTamil . '><label for="tamil">Tamil</label>
+<input type="radio" id = "english" name="lang" value="en" ' . $checkedEnglish . '><label for="english">English</label>
+</div>
 <br/>' . $sharing . '</div><div class="sidemenu-right">
 <ul id="menu-right">
   <li class="ui-state-disabled"><a href="#"><b><span class="uiTran">' . lanconTrnL ( "பா உதாரணங்கள்", $_SESSION ['lang'] ) . '</span></b></a></li>

@@ -21,6 +21,8 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
  
  */
 
+@media screen {
+
 body {
 	font: 85% "Tahoma", sans-serif;
 	margin: 0px;
@@ -31,8 +33,6 @@ p,ul {
 line-height:22.5px;
 
 }
-
-
 
 h1 {
 
@@ -271,4 +271,16 @@ color:red;
 
 .mailmsg {
 	font-size: 150%;
+}
+
+}
+
+@media print {
+
+.sidemenu-right,.sidemenu-left {
+
+display:none;
+
+}
+
 }
