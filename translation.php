@@ -41,6 +41,7 @@ function lanconTrn($text, $lang) {
 			"அடி மோனை" => "Line Alliteration",
 			"சீர் எதுகை" => "Foot Rhyme",
 			"அடி எதுகை" => "Line Rhyme",
+			"அச்சிடுக" => "Print",
 			"இல்லை" => "doesn't exist",
 			"ஆய்த எழுத்து:" => "Aytham:",
 			"பா உதாரணங்கள்" => "Sample Verses",

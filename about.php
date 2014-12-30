@@ -83,7 +83,7 @@ require_once "menu.php";
 
 		<p>
 			என்னைப்பற்றி அறிந்து கொள்ள எனது <a
-				href="http:/www.virtualvinodh.com/about">தனிப்பட்ட வலைத்தளத்தை</a>
+				href="http:/www.virtualvinodh.com">தனிப்பட்ட வலைத்தளத்தை</a>
 			காணவும். எனது ஆராய்ச்சியினை பற்றி அறிந்து கொள்ள எனது <a
 				href="http://sachi.cs.st-andrews.ac.uk/people/phd-students/vinodh-rajan/">பல்கலைக்கழக
 				பக்கத்தைக்</a> காணவும்.

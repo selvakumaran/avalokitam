@@ -109,6 +109,29 @@ class ProsodyParseTree
 			"nirY" 
 	);
 	
+	/** Tolkaappiyam Line Classes **/
+	
+	public $TolLineClass = array (
+	
+		4 => "kuRaLaTi",
+		5 => "kuRaLaTi",
+		6 => "kuRaLaTi",
+		7 => "ci_nta_Ti",
+		8 => "ci_nta_Ti",
+		9 => "ci_nta_Ti",
+		10 => "aLavaTi",
+		11 => "aLavaTi",
+		12 => "aLavaTi",
+		13 => "aLavaTi",						
+		14 => "aLavaTi",								
+		15 => "neTiLaTi",
+		16 => "neTiLaTi",
+		17 => "neTiLaTi",				
+		18 => "kaZineTiLaTi",						
+		19 => "kaZineTiLaTi",						
+		20 => "kaZineTiLaTi",				
+	);
+			
 	/**
 	 * Reference Array for getting the Word Type
 	 *
@@ -339,6 +362,47 @@ class ProsodyParseTree
 		
 		echo "<span class=\"uiTran\">" . lanconTrnL ( "ஆய்த எழுத்து", $this->Lang ) . ": </span>";
 		echo $LetterCount ['Aytham'];
+	}
+	
+	/** Display count of Tokappiyam Lineclasses **/
+	
+	public function DisplayLineClassTol() {
+	
+	$Lines = explode ( PHP_EOL, trim ( $this->InputSourceText ) );
+		
+	foreach($Lines as $Line)
+		{
+			$Words = explode(" ",$Line);
+			
+			echo lat2tam($Line)." ";
+			
+			$LineCount = 0;
+			
+			foreach($Words as $Word)
+			{
+			#echo "Before removal: ".$Word."<br/>";
+			
+			$Word = preg_replace("/([AIUEOYW])([kcTtpR]u$)/","$1#",$Word);
+			$Word = preg_replace("/(_[kGcJTNtnpmyrlvZLRV])([kcTtpR]u$)/","$1#",$Word);
+			$Word = preg_replace("/([aAiIuUeEoOYW])([kGcJTNtnpmyrlvZLRV][aiueo])([kcTtpR]u$)/","$1$2#",$Word);
+			$Word = preg_replace("/_[kGcJTNtnpmyrlvZLRV]/","",$Word);
+			
+			#echo "After removal: ".lat2tam($Word)." "."<br/>";
+			
+			$Word = preg_replace("/[kGcJTNtnpmyrlvZLRV]/","",$Word);
+			$Word = preg_replace("/_/","",$Word);
+			$Word = preg_replace("/#/","",$Word);
+			$Word = preg_replace("/ /","",$Word);
+			
+			#echo "$".$Word."$";
+			
+			$LineCount += strlen(trim($Word));
+			
+			#echo ": Count".$LineCount."<br/>";
+			
+		}
+			echo $LineCount." ".lat2tam($this->TolLineClass[$LineCount])."<br/>";
+		}
 	}
 	
 	/**

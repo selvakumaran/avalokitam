@@ -181,11 +181,13 @@ if ($formsubmit) {
 					
 					</ul>
 					<div id="ezhuttu">
+					<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("எழுத்து",$_SESSION['lang']); ?></span></div>					
 <?PHP $ptree->DisplayLetterCount(); ?>
 
 </div>
 
 					<div id="asaiceer">
+					<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("அசை - சீர்",$_SESSION['lang']); ?></span></div>
 						<div class="ui-state-highlight ui-corner-all"
 							style="margin-top: 5px; padding: 0 .7em;">
 							<p>
@@ -209,9 +211,10 @@ if ($formsubmit) {
 	<!-- <span style="float: left; padding-right:1em"><a href="/save" target="_blank"><span
 										class="uiTran"><?PHP echo lanconTrnL("சேமி",$_SESSION['lang']); ?></span></a></span> -->
 	
-	<span style="float: right;"><a href="/xml" target="_blank"><span
+	<span style="float: right;margin-left:15px;"><a href="/xml" target="_blank"><span
 										class="uiTran"><?PHP echo lanconTrnL("XML வடிவில் காண",$_SESSION['lang']); ?></span></a></span>
-						
+	<span style="float: right;"><a href="javascript:window.print()" target="_blank"><span
+										class="uiTran"><?PHP echo lanconTrnL("அச்சிடுக",$_SESSION['lang']); ?></span></a></span>						
 						</div>
 						<br />
 <?PHP $ptree->DisplaySyllableWordClass() ?> 
@@ -221,6 +224,7 @@ if ($formsubmit) {
 </div>
 
 					<div id="adi">
+						<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("அடி",$_SESSION['lang']); ?></span></div>
 						<div class="ui-state-highlight ui-corner-all"
 							style="margin-top: 5px; padding: 0 .7em;">
 							<p>
@@ -237,19 +241,20 @@ if ($formsubmit) {
 </div>
 
 					<div id="talai">
+					<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("தளை",$_SESSION['lang']); ?></span></div>
 
 						<div><?PHP $ptree->DisplayWordBond() ?></div>
 
 					</div>
 
 					<div id="monai">
-
+					<div class="printhead"><br/><span class="uiTran"><?PHP echo lanconTrnL("மோனை",$_SESSION['lang']); ?></span></div>
 						<div><?PHP $ptree->DisplayTodai("mOVY") ?></div>
 
 					</div>
 
 					<div id="etukai">
-
+					<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("எதுகை",$_SESSION['lang']); ?></span></div>
 						<div><?PHP $ptree->DisplayTodai("_etukY") ?></div>
 
 					</div>
@@ -257,7 +262,7 @@ if ($formsubmit) {
 <?PHP if(isset($_POST['venRules'])) { ?>
 
 <div id="analysis">
-
+					<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("விதி ஒப்பீடு",$_SESSION['lang']); ?></span></div>
 <?PHP echo $ptree->displayError($ptree->VenpaError); ?>
 
 </div>

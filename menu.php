@@ -76,7 +76,7 @@ $menu .= '
   <li ><a href="tamilprosody"><span id="uiTran">Tamil Prosody</span></a></li>
   <li class="ui-state-disabled"><a href="#"><b><span class="uiTran">' . lanconTrnL ( "மற்ற கருவிகள்", $_SESSION ['lang'] ) . '</span></b></a></li>
   <li><a href="http://www.virtualvinodh.com/aksharamukha"><span class="uiTran">' . lanconTrnL ( "அக்ஷரமுகம்", $_SESSION ['lang'] ) . '</span></a></li>
-  <li ><a href="http://www.virtualvinodh.com/tamil-ipa"><span class="uiTran">' . lanconTrnL ( "தமிழ் - IPA", $_SESSION ['lang'] ) . '</span></a></li>
+  <li ><a href="http://www.virtualvinodh.com/tamil-ipa"><span class="uiTran">' . lanconTrnL ( "அனுநாதம்", $_SESSION ['lang'] ) . '</span></a></li>
 </ul>
 <br/>
 <div class="languages" align="left"> 
@@ -117,7 +117,7 @@ $foot = '<br/><table align="center">
 </table>
 <br/>
 <div class="footnote" style="text-align:center;color:grey">
-Copyright © 2013 <a href="http://www.virtualvinodh.com/about">Vinodh Rajan</a>. This software is released under GNU AGPL v3 license. You may read the license <a href="http://www.gnu.org/licenses/agpl.html">here</a></div>
+Copyright © 2013 <a href="http://www.virtualvinodh.com">Vinodh Rajan</a>. This software is released under GNU AGPL v3 license. You may read the license <a href="http://www.gnu.org/licenses/agpl.html">here</a></div>
 <br/>';
 
 ?>

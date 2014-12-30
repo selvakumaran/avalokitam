@@ -21,7 +21,7 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
  
  */
 
-@media screen {
+@media screen,print {
 
 body {
 	font: 85% "Tahoma", sans-serif;
@@ -273,14 +273,39 @@ color:red;
 	font-size: 150%;
 }
 
+.printhead {
+display:none;
+}
+
 }
 
 @media print {
 
 .sidemenu-right,.sidemenu-left {
-
 display:none;
-
 }
+
+.ui-tabs-nav { display: none; }
+.ui-tabs .ui-tabs-hide { display: block !important; }
+.ui-tabs .ui-tabs-panel { display: block !important    }
+.container {
+margin-left:0px;
+margin-right:0px;
+}
+
+.ui-button {display: none;}
+
+.printhead {
+display:block;
+font-size:140%;
+margin-bottom:20px;
+font-weight:bold;
+color:#004276;
+}
+
+#accordion { display:none; }
+
+#uruppu { border-style:none; }
+
 
 }
