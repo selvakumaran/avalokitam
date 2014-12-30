@@ -70,6 +70,7 @@ function lanconTrn($text, $lang) {
 			"பெயர்:" => "Name:",
 			"மின்னஞ்சல்:" => "E-mail:",
 			"அனுப்புக" => "Send", 
+			"அனுநாதம்" => "Anunaadam",
 			"கூகிள் கணக்குடன் உள்நுழைக" => "Sign in with Google account",
 			"வெளியேறுக" => "sign out",
 			"பா இயற்றி" => "Verse creator",
