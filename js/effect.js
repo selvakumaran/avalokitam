@@ -18,6 +18,17 @@ You should have received a copy  of the GNU Affero General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
+
+   $(document).ajaxStart(function()
+   { 
+		$("#loading").show();  
+		$("#resultRhyme").html("");
+   });
+
+	$(document).ajaxStop(function() {
+        $("#loading").hide();
+    });
+
 $(document).ready(function () {
 
     // Accordion
@@ -133,6 +144,56 @@ $(document).ready(function () {
 
 
     });
+    
+    // Create Additional Fields in Word-Search 
+    
+    $('#todaiSel').on('change', function() {
+		if(this.value == "first" || this.value =="last")
+			$("#todaiSelN").show()
+		else
+			$("#todaiSelN").hide()
+
+	});
+
+    $('#matraCountSel').on('change', function() {
+		if(this.value == "other")
+			$("#matraCountSelN").show()
+		else
+			$("#matraCountSelN").hide()
+
+	});
+
+    $('#letterCountSel').on('change', function() {
+		if(this.value == "other")
+			$("#letterCountSelN").show()
+		else
+			$("#letterCountSelN").hide()
+
+	});
+	
+	// AJAX to query matching rhyming words
+	
+	$("#searchWord").click(function () {
+		
+	    $.post("/getRhymingWords", {
+	    		source: $("#rhymeInput").val(),
+	    		todaiSel: $('#todaiSel').val(),
+	    		letterCountSel: $("#letterCountSel").val(),
+	    		matraCountSel: $("#matraCountSel").val(),
+	    		vaypatuSel: $("#vaypatuSel").val(),
+	    		talaiSel: $("#talaiSel").val(),
+	    		todaiSelN: $("#todaiSelN").val(),
+	    		letterCountSelN: $("#letterCountSelN").val(),
+	    		matraCountSelN: $("#matraCountSelN").val()
+
+			  },
+
+			 function (data, status) {
+			 
+			 $("#resultRhyme").html(data);
+			 
+			 });
+	});
 
     // For Verse Creator - AJAX simplified analysis
     

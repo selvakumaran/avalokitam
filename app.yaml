@@ -15,6 +15,9 @@ handlers:
 - url: /js
   static_dir: js
 
+- url: /wordlists
+  static_dir: wordlists
+
 - url: /(.+?)
   script: \1.php
   

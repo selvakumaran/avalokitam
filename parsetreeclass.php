@@ -249,6 +249,8 @@ class ProsodyParseTree
 		$VowelSignCount = 0;
 		$AMeyCount = 0;
 		$LetterCount = array ();
+		$ShortCount = 0;
+		$LongCount = 0;
 		
 		$VowelList = array (
 				"அ",
@@ -325,7 +327,41 @@ class ProsodyParseTree
 		/*
 		 * Count A Mey
 		 */
+		 
+		 /* Aikaara-kurukkam and Aukaara-kurukkam with Romamized Text */
+		 
+		 /* ai - First Syllable - 1.5 Matra (hence Long)
+		        - Middle and Final Syllable - 1 Matra (hence Short) */
+		        
+		$ProsodyText = str_replace ( array (
+						"W",
+						"Y" 
+				), array (
+						"B",
+						"Q" 
+				), $ProsodyText ); // B-aukarakurukkam
+				            // Q-Aikaarakurukkam
+				
+		$ProsodyText = preg_replace ( "/(\b.)B/", "$1W", $ProsodyText );		
+		$ProsodyText = preg_replace ( "/(\b.)Q/", "$1Y", $ProsodyText );		        
+		 	
+		$shortVowels = array("a","i","u","e","o","B","Q");
+		$longVowels = array("A","I","U","E","O","Y","W");
+		$extraLong = array("A_a","I_i","U_u","E_e","O_o","B_i");
+
+		foreach ( $extraLong as $extra )
+			{
+				$LongCount += substr_count ( $ProsodyText, $extra );		
+				$ProsodyText = str_replace( $extra,"",$ProsodyText );
+			}
+
+		foreach ( $longVowels as $long )
+			$LongCount += substr_count ( $ProsodyText, $long );		
+			
 		
+		foreach ( $shortVowels as $short )
+			$ShortCount += substr_count ( $ProsodyText, $short );					
+						
 		foreach ( $AMeyList as $amy )
 			$AMeyCount += substr_count ( $TamilText, $amy );
 		
@@ -335,8 +371,62 @@ class ProsodyParseTree
 		$LetterCount ['Consonant'] = $ConsonantCount;
 		$LetterCount ['ConsonantVowel'] = $ConsonantVowelCount;
 		$LetterCount ['Aytham'] = $AythamCount;
-		
+		$LetterCount ['Short'] = $ShortCount;
+		$LetterCount ['Long'] = $LongCount;
+				
 		return $LetterCount;
+	}
+	
+	/* Returns the number of Matras in the word */
+	public function GetMatraCount($word) {
+		$Count1 = 0;
+		$Count1half = 0;
+		$Count2 = 0;
+	
+		$word = str_replace ( array (
+						"W",
+						"Y" 
+				), array (
+						"B",
+						"Q" 
+				), $word ); // B-aukarakurukkam
+				            // Q-Aikaarakurukkam
+				
+		$word = preg_replace ( "/(\b.)B/", "$1W", $word );		
+		$word = preg_replace ( "/(\b.)Q/", "$1Y", $word );
+
+		$word = preg_replace ( "/W(\b.)/", "*$1", $word );		
+		$word = preg_replace ( "/Y(\b.)/", "&$1", $word );
+		
+		$matra1 = array("a","i","u","e","o","B","Q");
+		$matra1half = array("Y","W"); 
+		$matra2 = array("A","I","U","E","O","*","&"); // Complete ai's and au's
+		$matrahalf = "_";
+		
+		foreach($matra1 as $letter)
+		{
+			$Count1 += substr_count ( $word, $letter );
+			$word = str_replace("_".$letter,"",$word);
+		}
+
+		foreach($matra1half as $letter)
+		{
+			$Count1half += substr_count ( $word, $letter );
+			$word = str_replace("_".$letter,"",$word);			
+		}
+				
+		foreach($matra2 as $letter)
+		{
+			$Count2 += substr_count ( $word, $letter );
+			$word = str_replace("_".$letter,"",$word);			
+		}
+			
+		$Counthalf = substr_count($word,$matrahalf);
+		
+		$MatraCount = ($Count1 * 1) + ($Count1half * 1.5) + ($Count2 * 2) + ($Counthalf * 0.5);
+		
+		return $MatraCount;
+	
 	}
 	
 	/**
@@ -345,23 +435,79 @@ class ProsodyParseTree
 	public function DisplayLetterCount() {
 		$LetterCount = $this->LetterCount;
 		
-		echo "<span class=\"uiTran\">" . lanconTrnL ( "உயிரெழுத்துக்கள்", $this->Lang ) . ": </span>";
+		$DivTag = <<<CWS
+
+<div class="ui-state-highlight ui-corner-all"
+	style="margin-top: 5px; padding: 0 .7em;">
+<p><span class="ui-icon ui-icon-info"
+	style="float: left; margin-right: .3em;"></span>
+
+CWS;
+
+		echo $DivTag;
+		echo "<span class=\"uiTran\">" . lanconTrnL ( "எழுத்து எண்ணிக்கை", $this->Lang ) . "</span>";
+		echo "</p></div>";
+		echo "<br/>";	
+
+		
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "உயிரெழுத்துக்கள்", $this->Lang ) . "</span>: </span>";
 		echo $LetterCount ['Vowel'];
 		
-		echo "<br/><br/>";
+		echo " | ";
 		
-		echo "<span class=\"uiTran\">" . lanconTrnL ( "மெய்யெழுத்துக்கள்", $this->Lang ) . ": </span>";
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "மெய்யெழுத்துக்கள்", $this->Lang ) . "</span>: </span>";
 		echo $LetterCount ['Consonant'];
 		
-		echo "<br/><br/>";
+		echo " | ";
 		
-		echo "<span class=\"uiTran\">" . lanconTrnL ( "உயிர்மெய்யெழுத்துக்கள்", $this->Lang ) . ": </span>";
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "உயிர்மெய்யெழுத்துக்கள்", $this->Lang ) . "</span>: </span>";
 		echo $LetterCount ['ConsonantVowel'];
 		
-		echo "<br/><br/>";
+		echo " | ";
 		
-		echo "<span class=\"uiTran\">" . lanconTrnL ( "ஆய்த எழுத்து", $this->Lang ) . ": </span>";
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "ஆய்த எழுத்து", $this->Lang ) . "</span>: </span>";
 		echo $LetterCount ['Aytham'];
+		
+		echo "<br/><br/>";	
+
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "குறில் எழுத்துக்கள்", $this->Lang ) . "</span>: </span>";
+		echo $LetterCount ['Short'];
+		
+		echo " | ";
+		
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "நெடில் எழுத்துக்கள்", $this->Lang ) . "</span>: </span>";
+		echo $LetterCount ['Long'];
+		
+		echo "<br/><br/>";	
+		
+		echo $DivTag;
+		echo "<span class=\"uiTran\">" . lanconTrnL ( "மாத்திரை எண்ணிக்கை", $this->Lang ) . "</span>";
+		echo "</p></div>";
+		echo "<br/>";	
+		
+		$Lines = explode ( PHP_EOL, trim ( $this->InputSourceText ) );		
+		
+		$MatraCountAll = 0;		
+		
+		foreach($Lines as $Line)
+		{
+			$Words = explode(" ",$Line);			
+			
+			foreach($Words as $Word)
+			{
+				$MatraCount = $this->GetMatraCount($Word);
+				echo "<ruby>"."<span class=\"uiTrant\">" . lancon ( lat2tam($Word) , $this->Lang ) . "</span>"."<rt>";
+				if($MatraCount > 0)
+					echo $MatraCount;
+				echo "</rt></ruby>"." ";
+				$MatraCountAll += $MatraCount;						
+			}
+			
+			echo "<br/><br/>";
+		}
+		
+		echo "<span class=\"letterTitle\"> <span class=\"uiTran\">" . lanconTrnL ( "மொத்த மாத்திரைகள்", $this->Lang ) . "</span>: </span>";
+		echo $MatraCountAll;
 	}
 	
 	/** Display count of Tokappiyam Lineclasses **/
@@ -420,6 +566,7 @@ class ProsodyParseTree
 		ob_start ();
 		$alliteration = $this->DisplayTodai ( "mOVY" );
 		$rhyme = $this->DisplayTodai ( "_etukY" );
+		$rhyme_ultima = $this->DisplayTodai ( "_iyYpu" );
 		ob_end_clean ();
 		
 		$phone = $verseXML->addChild ( 'Letter' );
@@ -479,7 +626,7 @@ class ProsodyParseTree
 					
 					$line->addAttribute ( 'type', lancon ( lat2tam ( $this->LineType [$value] ), $this->Lang ) );
 					
-					if (count ( $alliteration [0] [$lineCount] ) > 0 || count ( $rhyme [0] [$lineCount] ) > 0) 
+					if (count ( $alliteration [0] [$lineCount] ) > 0 || count ( $rhyme [0] [$lineCount] ) > 0 || count ( $rhyme_ultima [0] [$lineCount] ) > 0)
 
 					{
 						$ornament = $line->addChild ( "Ornamentation" );
@@ -505,6 +652,18 @@ class ProsodyParseTree
 							
 							$rhymeX->addAttribute ( 'type', $rhyme [0] [$lineCount] [1] );
 						}
+						
+						if (count ( $rhyme_ultima [0] [$lineCount] ) > 0) {
+							$rhymeX_ultima = $ornament->addChild ( "Ultima-Rhyme" );
+							
+							foreach ( $rhyme_ultima [0] [$lineCount] [0] as $ind => $match ) {
+								$match = $rhymeX_ultima->addChild ( "Match", $match );
+								$match->addAttribute ( "foot", $ind + 1 );
+							}
+							
+							$rhymeX_ultima->addAttribute ( 'type', $rhyme_ultima [0] [$lineCount] [1] );
+						}
+						
 					}
 					
 					$lineCount += 1;
@@ -512,7 +671,7 @@ class ProsodyParseTree
 			}
 		}
 		
-		if (count ( $alliteration [1] ) > 0 || count ( $rhyme [1] ) > 0) {
+		if (count ( $alliteration [1] ) > 0 || count ( $rhyme [1] ) > 0 || count ( $rhyme_ultima [1] ) > 0) {
 			$ornament = $verseXML->addChild ( "Ornamentation" );
 			
 			if (count ( $alliteration [1] ) > 0) {
@@ -532,6 +691,16 @@ class ProsodyParseTree
 					$match->addAttribute ( "line", $ind + 1 );
 				}
 			}
+			
+			if (count ( $rhyme_ultima [1] ) > 0) {
+				$rhymeX_ultima = $ornament->addChild ( "Ultima-Rhyme" );
+				
+				foreach ( $rhyme_ultima [1] [0] [0] as $ind => $match ) {
+					$match = $rhymeX_ultima->addChild ( "Match", $match );
+					$match->addAttribute ( "line", $ind + 1 );
+				}
+			}
+
 		}
 		
 		$dom = new DOMDocument ( '1.0' );
@@ -780,7 +949,9 @@ class ProsodyParseTree
 
 			{
 				$Bond ['bond'] = "ஒன்றிய வஞ்சித்தளை";
-			} else if ((substr ( $WordClass [$i], strlen ( $WordClass [$i] ) - 4 ) == "kaVi" && ($SyllableClass [$i + 1] == "nE_r")) || (substr ( $WordClass [$i], strlen ( $WordClass [$i] ) - 6 ) == "niZa_l" && ($SyllableClass [$i + 1] == "nE_r")) || (substr ( $WordClass [$i], strlen ( $WordClass [$i] ) - 6 ) == "NiZa_l" && ($SyllableClass [$i + 1] == "nE_r"))) 
+			} 
+			
+			else if ((substr ( $WordClass [$i], strlen ( $WordClass [$i] ) - 4 ) == "kaVi" && ($SyllableClass [$i + 1] == "nE_r")) || (substr ( $WordClass [$i], strlen ( $WordClass [$i] ) - 6 ) == "niZa_l" && ($SyllableClass [$i + 1] == "nE_r")) || (substr ( $WordClass [$i], strlen ( $WordClass [$i] ) - 6 ) == "NiZa_l" && ($SyllableClass [$i + 1] == "nE_r"))) 
 
 			{
 				$Bond ['bond'] = "ஒன்றா வஞ்சித்தளை";
@@ -2256,6 +2427,19 @@ CWS;
 								echo "</span>";
 								echo "<span class=\"uiTrant\">" . lancon ( lat2tam ( substr ( $Word, 4 ) ), $this->Lang ) . "</span>" . " ";
 							}
+							
+							if ($TodaiType == "_iyYpu") {
+								$Ornament [$LineIndex] [0] [$Index] = lancon ( lat2tam ( $Word ), $this->Lang );
+								
+								$Word = trim($Word);
+								
+								echo "<span class=\"uiTrant\">" . lancon ( lat2tam ( substr ( $Word, 0,-2 ) ), $this->Lang ) . "</span>";
+								echo "<span class=\"todaiword uiTrant\">";
+								echo lancon ( lat2tam ( substr ( $Word,-2 ) ), $this->Lang );
+								echo "</span>"." ";
+								
+							}
+
 						}
 					}
 					
@@ -2282,6 +2466,7 @@ CWS;
 		
 		return $Ornament;
 	}
+	
 	public function GetTodai($ProsodyText, $TodaiType) {
 		$ProsodyText = RemovePunctuation ( $ProsodyText ); // Removing Punctuation
 		                                                   // and
@@ -2317,6 +2502,9 @@ CWS;
 					$TodaiCheck = $this->CheckMonai ( $Words [0], $Words [$NewIndex] );
 				if ($TodaiType == "_etukY")
 					$TodaiCheck = $this->CheckEtukai ( $Words [0], $Words [$NewIndex] );
+				if ($TodaiType == "_iyYpu")
+					$TodaiCheck = $this->CheckIyaipu ( $Words [0], $Words [$NewIndex] );
+
 				
 				if ($TodaiCheck) {
 					$TodaiIndex [] = array (
@@ -2334,6 +2522,7 @@ CWS;
 		
 		return $TodaiLineIndex;
 	}
+	
 	public function CheckMonai($FirstWord, $SecondWord) 
 
 	{
@@ -2403,6 +2592,7 @@ CWS;
 		
 		return $MonaiSecondLtr;
 	}
+	
 	public function CheckEtukai($FirstWord, $SecondWord) 
 
 	{
@@ -2454,6 +2644,22 @@ CWS;
 		
 		return $EtukaiCheck;
 	}
+		
+	public function CheckIyaipu($FirstWord, $SecondWord) 
+	
+	{
+
+	if(substr ( trim($FirstWord), -2) == substr ( trim($SecondWord), -2 ))
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+	
+	}
+
 }
 
 // Class declaration over

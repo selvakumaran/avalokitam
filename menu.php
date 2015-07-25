@@ -65,7 +65,8 @@ $menu = '
 <div class="sidemenu-left">
 <ul id="menu-left">
   <li><a href="/"><span class="uiTran">' . lanconTrnL ( "முகப்பு", $_SESSION ['lang'] ) . '</span></a></li>
-  <li><a href="/editor"><span class="uiTran">' . lanconTrnL ( "பா இயற்றி", $_SESSION ['lang'] ) . '</span></a></li>';
+  <li><a href="/editor"><span class="uiTran">' . lanconTrnL ( "பா இயற்றி", $_SESSION ['lang'] ) . '</span></a></li>
+  <li><a href="/word-search"><span class="uiTran">' . lanconTrnL ( "சொல் தேடல்", $_SESSION ['lang'] ) . '</span></a></li>';
 $menu .= '<li><span class=""><a href="help-ta">உதவி</a></span></li>';
 $menu .= '<li><span class=""><a href="help-en">Help</a></span></li>';
 $menu .= '

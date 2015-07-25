@@ -83,6 +83,18 @@ use google\appengine\api\users\UserService;
 <?PHP echo $menu?>
 
 <div class="container">
+
+<?PHP if(!isset($_SESSION['notice']) && !$formsubmit ) { ?>
+						<div class="ui-state-highlight ui-corner-all notice"
+							style="margin-top: 5px; padding: 0 .7em;">
+							<p>
+								<span class="ui-icon ui-icon-closethick"
+									style="float: left; margin-right: .3em;"></span>
+<i><span class="uiTran"><?PHP echo lanconTrnL("<b>புதியது:</b> விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களை தேட:",$_SESSION['lang']); ?></span> <a href="/word-search"><span class="uiTran"><?PHP echo lanconTrnL("சொல் தேடல்",$_SESSION['lang']); ?></span></a>   </i>									
+</div>
+
+<?PHP } ?>
+
 		<div class="inp" id="accordion">
 			<h3>
 				<a href="#"><span class="uiTran"><?PHP echo lanconTrnL("பாவினை உள்ளிடவும்",$_SESSION['lang']); ?></span></a>
@@ -167,7 +179,10 @@ if ($formsubmit) {
 						
 						<li><a href="#monai"><span class="uiTran"><?PHP echo lanconTrnL("மோனை",$_SESSION['lang']); ?></span></a>
 						
-						<li><a href="#etukai"><span class="uiTran"><?PHP echo lanconTrnL("எதுகை",$_SESSION['lang']); ?></span></a>	
+						<li><a href="#etukai"><span class="uiTran"><?PHP echo lanconTrnL("எதுகை",$_SESSION['lang']); ?></span></a>							
+						
+						<li><a href="#iyaipu"><span class="uiTran"><?PHP echo lanconTrnL("இயைபு",$_SESSION['lang']); ?></span></a>	
+						
 						
 	<?PHP if(isset($_POST['venRules'])) { ?>
 	
@@ -229,11 +244,9 @@ if ($formsubmit) {
 							style="margin-top: 5px; padding: 0 .7em;">
 							<p>
 								<span class="ui-icon ui-icon-info"
-									style="float: left; margin-right: .3em;"></span> <strong><span
-									class="comon"><span class="uiTran"><?PHP echo lanconTrnL("அடி",$_SESSION['lang']); ?></span></strong><?php echo " ".($ptree->TotalLines);?></p>
+									style="float: left; margin-right: .3em;"></span><span
+									class="comon"><span class="uiTran"><?PHP echo lanconTrnL("அடி",$_SESSION['lang']); ?></span><?php echo " ".($ptree->TotalLines);?></p>
 						</div>
-
-						<br />
 
 <?PHP $ptree->DisplayLineClass()?>
 
@@ -258,6 +271,13 @@ if ($formsubmit) {
 						<div><?PHP $ptree->DisplayTodai("_etukY") ?></div>
 
 					</div>
+					
+					<div id="iyaipu">
+					<div class="printhead"><span class="uiTran"><?PHP echo lanconTrnL("இயைபு",$_SESSION['lang']); ?></span></div>
+						<div><?PHP $ptree->DisplayTodai("_iyYpu") ?></div>
+
+					</div>
+
 
 <?PHP if(isset($_POST['venRules'])) { ?>
 
@@ -307,6 +327,8 @@ $ytree->DisplaySyllableWordClass();
 </div>
 
 <?PHP } ?>
+
+
 
 <?PHP echo $foot ?>
 

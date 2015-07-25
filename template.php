@@ -31,7 +31,9 @@ require_once "menu.php";
 
 <?PHP echo $menu?>
 
-<div class="container-cont"></div>
+<div class="container-cont">
+
+</div>
 
 <?PHP echo $foot?>
 

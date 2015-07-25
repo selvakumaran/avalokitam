@@ -80,7 +80,10 @@ else
 	$ptree = new ProsodyParseTree ( $verse, $lang );
 	
 	if (isset ( $options ['xml'] ))
+	{
 		echo $ptree->DisplayXML ();
+		echo "end";
+	}
 	else {
 		
 		$xml = simplexml_load_string ( $ptree->DisplayXML () );

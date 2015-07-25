@@ -227,6 +227,10 @@ margin-right:175px;
 
 }
 
+.result {
+    width:90%;
+};
+
 #editor {
 float:left;
 position:relative;
@@ -274,7 +278,18 @@ color:red;
 }
 
 .printhead {
-display:none;
+	display:none;
+}
+
+.letterTitle {
+
+	font-style:italic;
+}
+
+.resultWord {
+
+	padding:5px;
+	
 }
 
 }
