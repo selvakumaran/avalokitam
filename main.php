@@ -90,7 +90,7 @@ use google\appengine\api\users\UserService;
 							<p>
 								<span class="ui-icon ui-icon-closethick"
 									style="float: left; margin-right: .3em;"></span>
-<i><span class="uiTran"><?PHP echo lanconTrnL("<b>புதியது:</b> விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களை தேட:",$_SESSION['lang']); ?></span> <a href="/word-search"><span class="uiTran"><?PHP echo lanconTrnL("சொல் தேடல்",$_SESSION['lang']); ?></span></a>   </i>									
+<i><span class="uiTran"><?PHP echo lanconTrnL("புதியது: விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களை தேட:",$_SESSION['lang']); ?></span> <a href="/word-search"><span class="uiTran"><?PHP echo lanconTrnL("சொல் தேடல்",$_SESSION['lang']); ?></span></a>   </i>									
 </div>
 
 <?PHP } ?>

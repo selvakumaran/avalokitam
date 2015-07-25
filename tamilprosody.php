@@ -62,7 +62,7 @@ require_once "menu.php";
 			Tamil Script is an alpha-syllabary. A <em>letter</em> in Tamil
 			Prosody corresponds to an <em>orthographic grapheme</em>.
 		</p>
-		<p>Tamil differentiates three types of Letters (due to its
+		<p>Tamil differentiates three types of letters (due to its
 			orthography)</p>
 		<ol>
 			<li><em>uyireḻuttu</em> - Initial Vowels (<sup>i</sup>V)
@@ -81,8 +81,8 @@ require_once "menu.php";
 		<u>CV</u> <u>CV</u> <u>CV</u> C
 
 		<h2>Metreme</h2>
-		<p>Metreme is the basic unit of Tamil Prosody, which in turn makes up
-			the metrical foot. A Metreme can (roughly) be either mono-syllabic or
+		<p>Metreme is the basic unit of Tamil prosody, which in turn makes up
+			the metrical foot. A metreme can (roughly) be either mono-syllabic or
 			bi-syllabic.</p>
 
 		<p>
@@ -90,7 +90,7 @@ require_once "menu.php";
 			metreme is "<em>nirai</em>".
 		</p>
 
-		<p>They may be conveniently expressed as a Regular Expression:</p>
+		<p>They may be conveniently expressed as a regular expression:</p>
 
 		<table cellspacing="10">
 			<tr>
@@ -192,7 +192,7 @@ require_once "menu.php";
 
 				<h2>Linkage</h2>
 				<p>The relation between preceding feet and the succeeding feet is
-					termed as "Linkage". The type of linkage is dependant on the class
+					termed as "linkage". The type of linkage is dependant on the class
 					of preceding feet and the first metreme of the succeeding feet.
 				
 				
@@ -207,7 +207,7 @@ require_once "menu.php";
 				<br /> = = → -
 				<br />
 
-				<p>Tamil Prosody defines 6 specific types of linkages that may occur
+				<p>Tamil prosody defines 6 specific types of linkages that may occur
 					between metrical feet.</p>
 
 				<h2>Metrical Line</h2>
@@ -218,15 +218,15 @@ require_once "menu.php";
 					around 3 - 6 feet per line.</p>
 
 				<h2>Ornamentation</h2>
-				<p> In Tamil, <em>Toṭai</em> refers to a collection of several forms of poetic devices - both phonetic ( e.g. <em>etuaki,mōṉai</em>) and lexical ( e.g. <em>muraṇ</em> - Usage of lexically
+				<p> In Tamil, <em>Toṭai</em> refers to a collection of several forms of poetic devices - both phonetic ( e.g. <em>etukai,mōṉai</em>) and lexical ( e.g. <em>muraṇ</em> - Usage of lexically
 				opposite pairs such as light & dark). Etymologically, it is derived from <em>toṭu</em>, meaning 'making a flower garland'. Similar to that of linking
 				different flowers (and forming patterns), patterns can be formed in a verse composition, by means of words and syllables. </p>
 				<p>Ornamentation in Tamil Prosody mainly occurs as :</p>
 
 				<ol>
-					<li><em>mōṉai</em> - Alliteration of the first Letter
+					<li><em>mōṉai</em> - Alliteration of the first letter
 					
-					<li><em>etukai</em> - Rhyme on the second Letter
+					<li><em>etukai</em> - Rhyme on the second letter
 				
 				</ol>
 				
@@ -242,9 +242,9 @@ require_once "menu.php";
 				alliteration.
 				<h3>Rhyme</h3>
 				<p>Rhyme on second Letter is the another type of Ornamentation
-					found in Tamil Prosody. For a feet to be considered as rhyming with
-					another feet, the second Letter must belong to the same consonant
-					class while the first Letter must agree in vowel length.</p>
+					found in Tamil prosody. For a feet to be considered as rhyming with
+					another feet, the second letter must belong to the same consonant
+					class while the first letter must agree in vowel length.</p>
 
 				<p>
 					<em>pāṭam - kūṭam </em> is considered to rhyme, while <em>kal
@@ -252,7 +252,7 @@ require_once "menu.php";
 				</p>
 
 				<h1>Metre</h1>
-				<p>Classical Tamil Prosody has 4 types of "major" metres (along with
+				<p>Classical Tamil prosody has 4 types of "major" metres (along with
 					their subtypes). They are:</p>
 				<ol>
 					<li>veṇpā
@@ -402,7 +402,7 @@ require_once "menu.php";
 
 					<p>
 						This verse satisfies all rules of the <em>Veṇpā</em> metre.
-						Being of two Metrical Lines, it falls under the sub-type of <em>Kuṟaḷ
+						Being of two metrical lines, it falls under the sub-type of <em>Kuṟaḷ
 							Veṇpā</em>.
 					</p>
 
