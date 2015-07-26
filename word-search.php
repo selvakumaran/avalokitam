@@ -58,8 +58,8 @@ require_once "parsetreeclass.php";
 
 	<big>எழுத்தெண்ணிக்கை</big>
 	<select id="letterCountSel">
-		<option value="all" selected>அனைத்தும்</option>
-		<option value="src">மூலச்சொல்லின் எழுத்தெண்ணிக்கை</option>
+		<option value="all">அனைத்தும்</option>
+		<option value="src" selected>மூலச்சொல்லின் எழுத்தெண்ணிக்கை</option>
 		<option value="srcLs">மூலச்சொல்லைவிட குறைவாக</option>
 		<option value="srcGt">மூலச்சொல்லைவிட அதிகமாக</option>
 		<option value="other">பிற எழுத்தெண்ணிக்கை</option>

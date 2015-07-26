@@ -92,13 +92,13 @@ require_once "menu.php";
 		<h1>About</h1>
 
 		<p>
-			Avalokitam is a Prosody Analyzer for the Tamil Language. It
-			constructs a parse tree of the input text based on the prosodic
+			Avalokitam is a prosody analyzer for the Tamil language. It
+			constructs a parse tree of input text based on prosodic
 			syllable patterns. Based on this parse tree, the input verses are
-			analyzed for all the six basic elements of Tamil prosody: <em>
+			analyzed for all six basic elements of Tamil prosody: <em>
 				eḻuttu (Letter), acai (Metreme), cīr (Metrical Foot), taḷai
 				(Linkage), aṭi (Metrical Line) & toṭai (Ornamenation)</em>. The
-			meter of the verse is then recognized by matching the elements with
+			meter of a verse is then recognized by matching the elements with
 			the elaborate and complex rules of Tamil prosody.
 		</p>
 
@@ -107,7 +107,7 @@ require_once "menu.php";
 			Tamil Language.</p>
 
 		<p>
-			The Tool runs on PHP in Google App Engine. It has a <a
+			The tool runs on PHP in Google App Engine. It has a <a
 				href="help-en#API">REST API</a> and can also be run from the <a
 				href="help-en#terminal">terminal</a>.
 		</p>

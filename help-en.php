@@ -35,7 +35,7 @@ require_once "menu.php";
 
 		<h1>Help</h1>
 
-		<p>Given a Tamil Prosody Text, it analyzes all the Metrical
+		<p>Given a Tamil prosody text, it analyzes all the metrical
 			information (yāppu)&nbsp;such as acai, cīr,
 			vāypāṭu,&nbsp;taḷai, aṭi, toṭai&nbsp;etc and displays them.
 			It also attempts to find the metre of the Text. It can recognize all
@@ -47,7 +47,7 @@ require_once "menu.php";
 		<h2>Guidelines for Text Input</h2>
 		<ul>
 			<li>The Text entered must have their cīr-s divided properly.</li>
-			<li>Sandhi split text is not adviced to be given as Input. The Sandhi
+			<li>Sandhi split text is not adviced to be given as input. The sandhi
 				split version plays havoc with the prosody rules, and the incorrect
 				metre is displayed as a result.</li>
 			<li>neṭilaṭi &amp; kaḻineṭilaṭi must be entered as a single
@@ -55,8 +55,8 @@ require_once "menu.php";
 				as two lines with a tab on the second line)</li>
 			<li>The letters that are to omitted in metrical analysis must be
 				given within braces ().&nbsp;</li>
-			<li>The taṉiccol must be indicated with the symbol - (Hyphen)</li>
-			<li>Except for Hyphens, avoid all other unnecessary puncutations</li>
+			<li>The taṉiccol must be indicated with the symbol - (hyphen)</li>
+			<li>Except for hyphens, avoid all other unnecessary puncutations</li>
 			<li>Avoid unnecessary spaces &amp; tabs.</li>
 		</ul>
 
@@ -72,22 +72,22 @@ require_once "menu.php";
 
 		<h2>FAQ</h2>
 		<ol>
-			<li><strong>The Metre of the Text I have entered appears incorrectly.
+			<li><strong>The metre of the Text I have entered appears incorrectly.
 					I have entered a veṇpā, while the result shows it as a
 					veṇṭuṟai. Why ?</strong></li>
 			<br />
-			<div>Please check if the Text is in concordance with all the rules of
+			<div>Please check if the text is in concordance with all the rules of
 				the veṇpā metre. (The taḷai, vāyppāṭu etc ) Failing that,
-				the nearest pāviṉam is Matched. In case of veṇpā, it is
+				the nearest pāviṉam is matched. In case of veṇpā, it is
 				veṇṭuṟai&nbsp;</div>
 			<div>&nbsp;</div>
 			<div></div>
-			<div>So Whenever, identification with pā fails, the nearest
+			<div>So whenever, identification with pā fails, the nearest
 				pāviṉam is matched and displayed.</div>
 			<div>&nbsp;</div>
 			<li><strong>How does the parser handle puṟanaṭai ?</strong></li>
 			<br />
-			<div>puṟanaṭai are specific exceptions to the General prosody
+			<div>Puṟanaṭai are specific exceptions to the general prosody
 				rules, to deliberately fit a text to a particular metre. As of now,
 				puṟanaṭai must be handled manually. For e.g. In cases, where
 				Aytam should be considered a short letter, it can be replaced by
@@ -102,6 +102,18 @@ require_once "menu.php";
 				several ways. If you want to force the parser to parse in a specific
 				way, do indicate the syllable breaks using /. As in
 				கலை/யோ/டு</div>
+			<li><strong>How do I force the parser to parse a word in a specific
+					way ?</strong></li>
+			<br />
+			<div>There are several cases, where a given word can be parsed in
+				several ways. If you want to force the parser to parse in a specific
+				way, do indicate the syllable breaks using /. As in
+				கலை/யோ/டு</div>
+			<li><strong>What is the matra count for aikārakuṟukkam?</strong></li>
+			<br />
+			<div>Aikārakuṟukkam has 1.5 matras at the word beginning and 1 matra elsewhere.</div>
+				
+				
 		</ol>
 		<div></div>
 

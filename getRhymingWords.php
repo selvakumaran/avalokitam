@@ -20,7 +20,7 @@
  @$ptreeA = new ProsodyParseTree ("", "", "");
  
  # The Wordlist was extracted from Wiktionary
- $wordListCont = file_get_contents('wordlists/wordListWikt');
+ $wordListCont = file_get_contents('http://www.avalokitam.com/wordlists/wordListWikt.txt');
  $wordList = explode("\n",$wordListCont); 
 
  $source = trim(tam2lat($_POST['source']));	
