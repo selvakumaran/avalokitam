@@ -89,8 +89,9 @@ function lanconTrn($text, $lang) {
 			"பா இயற்றவும்" => "Compose verse",
 			"துரித பகுப்பாய்வு" => "Instantaneous scansion",
 			"நீங்கள் பா இயற்றிக்கொண்டிருக்கும்போதே , உடனுக்குடன் தளை மற்றும் சீர் வாய்ப்பாடுகள் முதலியவை பகுப்பாய்வு செய்து கீழே வெளியிடப்படும்." => "As you are composing the verse, instantaneous scansion is perfomed - displaying linkage & metrical feet.",
-			"புதியது: விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களை தேட:" => "New: To search for rhyming words:",
+			"புதியது: விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களைத் தேட:" => "New: To search for rhyming words:",
 			"ொருத்தமான சொற்கள் தேடப்படுகின்றன. பொறுத்தருளவும்..." => "Searching for matching words. Please wait...",
+			"நீக்குக" => "Clear",
 			
 	);
 	

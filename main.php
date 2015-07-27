@@ -25,6 +25,7 @@
 require_once "menu.php";
 require_once "parsetreeclass.php";
 require_once "yapparungalaparsetree.php";
+require_once "datastore.php";
 
 global $lang;
 
@@ -90,7 +91,7 @@ use google\appengine\api\users\UserService;
 							<p>
 								<span class="ui-icon ui-icon-closethick"
 									style="float: left; margin-right: .3em;"></span>
-<i><span class="uiTran"><?PHP echo lanconTrnL("புதியது: விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களை தேட:",$_SESSION['lang']); ?></span> <a href="/word-search"><span class="uiTran"><?PHP echo lanconTrnL("சொல் தேடல்",$_SESSION['lang']); ?></span></a>   </i>									
+<i><span class="uiTran"><?PHP echo lanconTrnL("புதியது: விரும்பிய ஓசை நயத்துடன் கூடிய சொற்களைத் தேட:",$_SESSION['lang']); ?></span> <a href="/word-search"><span class="uiTran"><?PHP echo lanconTrnL("சொல் தேடல்",$_SESSION['lang']); ?></span></a>   </i>									
 </div>
 
 <?PHP } ?>
@@ -115,6 +116,9 @@ use google\appengine\api\users\UserService;
 		$uyirU = TRUE;
 	
 	$ptree = new ProsodyParseTree ( $_POST ['ttxt'], $lang, $uyirU );
+		
+	if(strpos($_POST ['ttxt'],"மாதவா போதி வரதா வருளமலா")===false)
+		$hashkey = insert_datastore($_POST ['ttxt']);
 	
 	echo $_POST ['ttxt'];
 }
@@ -126,6 +130,11 @@ use google\appengine\api\users\UserService;
 					<input type="submit"
 						value=<?PHP echo lanconTrnL("ஆராய்க",$_SESSION['lang']); ?>
 						id="submit" class="uiTran" />
+						
+					<input type="button"
+						value=<?PHP echo lanconTrnL("நீக்குக",$_SESSION['lang']); ?>
+						id="clear" class="uiTran" />
+						
 				</p>
 
 				<div id="checkbox">

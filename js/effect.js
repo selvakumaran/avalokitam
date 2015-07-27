@@ -62,6 +62,8 @@ $(document).ready(function () {
     $("input:submit").button();
 
     $("#extendanalysis").button();
+    
+    $("#clear").button();
 
     $("#talai").buttonset();
 
@@ -73,6 +75,12 @@ $(document).ready(function () {
 
     });
     
+    
+    $("#clear").click(function() {
+    
+    $("#itext").val('');
+    
+    });    
     // close site notice
 
     $(".ui-icon-closethick").click(function () {
@@ -338,6 +346,17 @@ $(document).ready(function () {
             $("#submit").val(data);
 
         });
+        
+        $.get("/translation", {
+
+            txt: $("#clear").val(),
+            lang: lan
+        }, function (data, status) {
+
+            $("#clear").val(data);
+
+        });
+        
 
         $.get("/translation", {
 
